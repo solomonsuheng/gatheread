@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/*share_start*/
+#share {
+	position: fixed;
+	_position: absolute;
+	_top: expression(eval(document.documentElement.scrollTop +   
+		   document.documentElement.clientHeight) -34+"px" );
+	bottom: 34px;
+	left: 95%;
+	width: 30px;
+	zoom: 1;
+}
+
+#share a {
+	background-image: url(../img/images/share.png);
+	background-repeat: no-repeat;
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin-bottom: 2px;
+	overflow: hidden;
+	text-indent: -999px;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+#share .sina {
+	background-position: 0 0;
+	position: absolute;
+	bottom: 32px;
+}
+
+#share a.sina:hover {
+	background-position: -30px 0;
+}
+
+#share .tencent {
+	background-position: 0 -30px;
+	position: absolute;
+	bottom: 0;
+}
+
+#share a.tencent:hover {
+	background-position: -30px -30px;
+}
+
+#share a#totop {
+	background-position: 0 -120px;
+	position: absolute;
+	bottom: 64px;
+	cursor: pointer;
+}
+
+#share a#totop:hover {
+	background-position: -30px -120px;
+}

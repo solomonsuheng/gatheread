@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name></display-name>
+	<servlet>
+		<description>none</description>
+		<display-name>none</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.gatheread.Servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>none</description>
+		<display-name>none</display-name>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.gatheread.Servlet.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>none</description>
+		<display-name>none</display-name>
+		<servlet-name>ReadServlet</servlet-name>
+		<servlet-class>com.gatheread.Servlet.ReadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>none</description>
+		<display-name>none</display-name>
+		<servlet-name>PreferSettingServlet</servlet-name>
+		<servlet-class>com.gatheread.Servlet.PreferSettingServlet</servlet-class>
+	</servlet>
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/loginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/registerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ReadServlet</servlet-name>
+		<url-pattern>/readServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PreferSettingServlet</servlet-name>
+		<url-pattern>/preferSettingServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- 配置登录过滤器 -->
+	<filter>
+		<filter-name>login</filter-name>
+		<filter-class>com.gatheread.filter.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>login</filter-name>
+		<url-pattern>/logined/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 配置错误页面信息 -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/includePage/errorPage/page404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>405</error-code>
+		<location>/includePage/errorPage/page405.jsp</location>
+	</error-page>
+</web-app>
