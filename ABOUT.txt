@@ -1,0 +1,3 @@
+毕业设计
+使用Java+MongoDB+Bootstrap开发
+聚读类应用
